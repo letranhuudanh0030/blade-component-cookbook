@@ -12,7 +12,6 @@
             return {
                 init() {
                     // render
-                    
                     grecaptcha.ready(()=>{
                         grecaptcha.render(this.$el, {
                             'sitekey': '{{ config('services.recaptcha.key') }}',
@@ -22,9 +21,7 @@
                     });
                 },
 
-                execute() {
-                    alert('execute');
-                    
+                execute() {                    
                     grecaptcha.execute();
                 },
 
